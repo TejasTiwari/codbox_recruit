@@ -40,6 +40,48 @@ body {
   display: none;
 }
 
+.imagebox {
+  width: 30%;
+  padding-left: 10%;
+  padding-top: 5%;
+  vertical-align: middle;
+  float: left;
+}
+
+.textbox {
+  color: #ededed;
+  font-size: 17px;
+  font-family: "Comic Sans MS";
+  font-weight: bold;
+  width: 30%;
+  float: right;
+  text-align: left;
+  padding-top: 5%;
+  padding-right:10%;
+}
+.textbox p{
+  font-weight: lighter;
+}
+
+
+.line {
+  border-left: 1px solid grey;
+height: 75%;
+margin-top: 150px;
+position: absolute;
+left: 50%;
+margin-left: -3px;
+top: 0;
+}
+
+@media all and (max-width:30em){
+ a.button {
+  display:block;
+  margin:0.2em auto;
+ }
+}
+
+
 @media screen and (max-width: 389px){
 
   .topnav a.nav_left {
@@ -48,22 +90,14 @@ body {
     margin-top:20px;
   }
 
-  .topnav a.nav_logo{
-
-  }
-
 }
 
 @media screen and (max-width: 445px) {
   .topnav a.nav_left{
     font-size: 20px;
     margin-right: 10px;
-  }
-}
-@media screen and (max-width:409px) {
-  .topnav a.nav_logo{
-    width: 140px;
-    height: auto;
+    float: left;
+
   }
 }
 
@@ -86,27 +120,44 @@ body {
     display: block;
     text-align: left;
   }
+
 }
+
+
 </style>
 </head>
-<body>
+
+<body bgcolor="#333">
 
 <div class="topnav" id="myTopnav">
 
   <a class="nav_logo" href="#page-top">
-      <img class="logo_img" src="https://raw.githubusercontent.com/TejasTiwari/codbox_recruit/master/icon.jpg" alt="">
+      <img class="logo_img" src="https://raw.githubusercontent.com/TejasTiwari/codebox/master/img/icon.jpg" alt="">
   </a>
 
-  <a href="#home" class="nav_left">LogIn/ Register</a>
+  <a href="#home" class="nav_left">Sign In</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
 </div>
+<hr color="grey">
 
-<div style="padding-left:16px">
-  <h2>Responsive Topnav Example</h2>
-  <p>Resize the browser window to see how it works.</p>
+<div class="imagebox">
+<img src="https://raw.githubusercontent.com/TejasTiwari/codbox_recruit/master/logo.jpg" width="100%" height="auto" />
+
 </div>
+<div class="line"></div>
+
+<div class="textbox">
+
+  <h1>Code Box</h1>
+  <p>Front-end web development is the practice of converting data to a graphical interface, through the use of HTML, CSS, and JavaScript, so that users can view and interact with that data.</p><br><p> Hyper Text Markup Language (HTML) is the backbone of any website development process, without which a web page doesn't exist. </p><br><p>Hypertext means that text has links, termed hyperlinks, embedded in it. When a user clicks on a word or a phrase that has a hyperlink, it will bring another web-page.</p>
+  <br>
+
+
+
+</div>
+
 
 <script>
 function myFunction() {
