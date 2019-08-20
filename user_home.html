@@ -34,6 +34,37 @@ body {
 .topnav .icon {
   display: none;
 }
+
+.container{
+  width:100%;
+  padding-top: 30px;
+  display:flex;
+  flex-direction: row;
+}
+
+.container .box{
+  float: right;
+
+  padding-top:100px;
+  margin-left: 0px;
+  padding-right: 150px;
+  padding-left: 50px;
+  width:80%;
+  heigth: 100%;
+}
+.container .list{
+  float: right;
+  width:15%;
+  padding-left: 20px;
+  padding-right: 60px;
+}
+.list li p{
+  background-color: #4a8c5c;
+}
+
+
+
+
 @media all and (max-width:30em){
  a.button {
   display:block;
@@ -74,6 +105,29 @@ body {
   }
 }
 
+@media screen and (max-width: 1120px) {
+  .container{
+    diaplay:flex;
+    flex-direction: column;
+  }
+  .container .list{
+    width: 100%;
+
+  }
+  hr{
+    width:120%;
+  }
+  .container hr{
+    margin-left:45px;
+    width: 70%;
+  }
+  .container .box{
+    margin-top:-90px;
+    height:60px;
+  }
+}
+
+
 
 $black:#212121;
 * {
@@ -81,16 +135,16 @@ $black:#212121;
 }
 
 textarea {
-  float: left;
-  margin-left:20px;
-  margin-top:20px;
+  margin-top: 20px;
+  float:right;
+  padding-left:-150px;
   border-radius: 10px;
   background-color:rgba(white,0.2);
   border:solid 1px transparent;
   color:darken(invert($black),10%);
   overflow:hidden;
-  width:60%;
-  height: 600px;;
+  width:100%;
+  height: 600%;;
   font-size:2em;
   &:focus {
     background-color:rgba(white,0.3);
@@ -115,9 +169,21 @@ textarea {
 </div>
 <hr color="grey">
 
+<div class="container">
 
+<div class="list">
+  <h1 align="center">List Of Files</h1>
+  <hr>
+  <br>
+  <ul style="list-style-type: none">
+    <li>Document 1</li>
+  </ul>
+</div>
+
+  <div class="box">
 <textarea name="responsive-text" rows="1"></textarea>
-
+</div>
+</div>
 </body>
 
 <script>
