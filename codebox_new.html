@@ -73,6 +73,46 @@ left: 50%;
 margin-left: -3px;
 top: 0;
 }
+  
+  .button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #309657;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 17px;
+  padding: 20px;
+  width: 170px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
 
 @media all and (max-width:30em){
  a.button {
@@ -154,7 +194,7 @@ top: 0;
   <p>Front-end web development is the practice of converting data to a graphical interface, through the use of HTML, CSS, and JavaScript, so that users can view and interact with that data.</p><br><p> Hyper Text Markup Language (HTML) is the backbone of any website development process, without which a web page doesn't exist. </p><br><p>Hypertext means that text has links, termed hyperlinks, embedded in it. When a user clicks on a word or a phrase that has a hyperlink, it will bring another web-page.</p>
   <br>
 
-
+  <button class="button" style="vertical-align:middle"><span>Know More </span></button>
 
 </div>
 
