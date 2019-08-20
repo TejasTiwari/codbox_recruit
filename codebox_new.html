@@ -8,12 +8,10 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
-
 .topnav {
   overflow: hidden;
   background-color: #333;
 }
-
 .topnav a {
   float: left;
   display: block;
@@ -23,23 +21,19 @@ body {
   text-decoration: none;
   font-size: 17px;
 }
-
 .topnav a:hover {
   background-color: #ddd;
   color: black;
 }
-
 .topnav a.nav_left {
   float: right;
   margin-right: 100px;
   margin-top:20px;
   font-size: 25px;
 }
-
 .topnav .icon {
   display: none;
 }
-
 .imagebox {
   width: 30%;
   padding-left: 10%;
@@ -47,7 +41,6 @@ body {
   vertical-align: middle;
   float: left;
 }
-
 .textbox {
   color: #ededed;
   font-size: 17px;
@@ -59,11 +52,13 @@ body {
   padding-top: 5%;
   padding-right:10%;
 }
+.textbox h1{
+  margin-left:30px;
+}
 .textbox p{
+  margin-left:30px;
   font-weight: lighter;
 }
-
-
 .line {
   border-left: 1px solid grey;
 height: 75%;
@@ -73,8 +68,9 @@ left: 50%;
 margin-left: -3px;
 top: 0;
 }
-  
+
   .button {
+
   display: inline-block;
   border-radius: 4px;
   background-color: #309657;
@@ -87,15 +83,14 @@ top: 0;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
+  margin-left: 30px;
 }
-
 .button span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
-
 .button span:after {
   content: '\00bb';
   position: absolute;
@@ -104,43 +99,33 @@ top: 0;
   right: -20px;
   transition: 0.5s;
 }
-
 .button:hover span {
   padding-right: 25px;
 }
-
 .button:hover span:after {
   opacity: 1;
   right: 0;
 }
-
 @media all and (max-width:30em){
  a.button {
   display:block;
   margin:0.2em auto;
  }
 }
-
-
 @media screen and (max-width: 389px){
-
   .topnav a.nav_left {
     float: right;
     margin-right: 20px;
     margin-top:20px;
   }
-
 }
-
 @media screen and (max-width: 445px) {
   .topnav a.nav_left{
     font-size: 20px;
     margin-right: 10px;
     float: left;
-
   }
 }
-
 @media screen and (max-width: 600px) {
   .topnav.responsive {position: relative;}
   .
@@ -153,16 +138,34 @@ top: 0;
     float: right;
     margin-right:50px;
     margin-top:20px;
-
   }
   .topnav.responsive a {
     float: none;
     display: block;
     text-align: left;
   }
-
 }
 
+@media screen and (max-width: 884px){
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+  .line{
+    visibility: hidden;
+  }
+  .textbox{
+    width:80%;
+  }
+
+  .imagebox{
+    width:100%;
+  }
+  .imagebox img{
+    width:30%;
+    margin-left: 20%;
+  }
+}
 
 </style>
 </head>
@@ -181,7 +184,7 @@ top: 0;
   </a>
 </div>
 <hr color="grey">
-
+ <div class="container">
 <div class="imagebox">
 <img src="https://raw.githubusercontent.com/TejasTiwari/codbox_recruit/master/logo.png" width="100%" height="auto" />
 
@@ -197,7 +200,7 @@ top: 0;
   <button class="button" style="vertical-align:middle"><span>Know More </span></button>
 
 </div>
-
+</div>
 
 <script>
 function myFunction() {
