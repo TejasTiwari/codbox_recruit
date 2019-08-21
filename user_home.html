@@ -34,23 +34,34 @@ body {
 .topnav .icon {
   display: none;
 }
-
 .container{
   width:100%;
   padding-top: 30px;
   display:flex;
   flex-direction: row;
 }
-
 .container .box{
   float: right;
-
   padding-top:100px;
   margin-left: 0px;
   padding-right: 150px;
   padding-left: 50px;
   width:80%;
 }
+.bottom-opt{
+  margin-top: 20px;
+  float: right;
+  display: flex;
+  flex-direction: row;
+  margin-right:20%;
+}
+.bottom-opt a{
+  text-decoration: none;
+  color: #d6d4d0;
+  padding-right:30px;
+  padding-bottom: 10px;
+}
+
 .container .list{
   float: right;
   width:15%;
@@ -96,10 +107,6 @@ body {
     text-decoration: none;
     margin-right:20px;
   }
-
-
-
-
 @media all and (max-width:30em){
  a.button {
   display:block;
@@ -139,7 +146,6 @@ body {
     text-align: left;
   }
 }
-
 @media screen and (max-width: 1120px) {
   .container{
     diaplay:flex;
@@ -147,7 +153,6 @@ body {
   }
   .container .list{
     width: 100%;
-
   }
   hr{
     width:120%;
@@ -157,18 +162,16 @@ body {
     width: 70%;
   }
   .container .box{
+
     margin-top:-90px;
     height:60px;
   }
+
 }
-
-
-
 $black:#212121;
 * {
   outline:0px;
 }
-
 textarea {
   margin-top: 20px;
   float:right;
@@ -219,6 +222,13 @@ textarea {
 
   <div class="box">
 <textarea name="responsive-text" rows="1"></textarea>
+
+<div class="bottom-opt">
+  <a href="">Save</a>
+  <a href="">Edit</a>
+  <a href="">Copy</a>
+</div>
+
 </div>
 
 </div>
@@ -234,7 +244,6 @@ if (x.className === "topnav") {
   x.className = "topnav";
 }
 }
-
 $('textarea').on('change keydown paste', function(e){
     var text = $(this).val();
     var lineBreaksCount = text.replace(/[^\n]/g, "").length;
